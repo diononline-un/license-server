@@ -1,0 +1,11 @@
+{
+  "name": "license-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "generate-key": "node generate-key.js",
+    "revoke-key": "node revoke-key.js"
+  }
+}
