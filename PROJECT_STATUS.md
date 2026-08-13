@@ -1,20 +1,14 @@
 ---
-status: in-development
-progress: 85
+status: done
+progress: 100
 version: "1.0.0"
-tags: [license, aktivierung, backups, ops-tooling]
-scope: "Minimaler Lizenz-/Aktivierungsserver für den Shop-Baukasten mit Backup-Upload und Browser-Restore"
+tags: [license, aktivierung, backups, ops-tooling, verworfen]
+scope: "VERWORFEN: Lizenzkonzept fallengelassen. Server wurde nie deployed, Code nur noch Archiv-Referenz."
 last_updated: "2026-08-13"
-next_steps:
-  - Docker-Stack anlegen (Port-Ring 2012, Volumes für keys.json und backups/)
-  - Hinter Reverse Proxy mit TLS stellen und öffentliche URL vergeben
-  - LICENSE_SERVER in shop-baukasten (activation.ts, backup.ts) auf echte URL setzen
-  - End-to-End-Test: Key generieren, Instanz aktivieren, Backup hochladen, Restore prüfen
+next_steps: []
 ---
 
 # Aktueller Stand
-- Alle Endpunkte implementiert: POST /activate, GET /status, POST /backup/upload, GET /restore
-- Key-Verwaltung über CLI-Skripte (generate-key, set-expiry, revoke-key) funktioniert ohne Restart
-- Keine Runtime-Dependencies, kein Framework, Daten in flacher keys.json
-- Noch nicht deployed: kein Docker-Container, keine TLS-Anbindung, keine Portvergabe
-- Kein docker-compose.yml vorhanden, nur Dockerfile
+- Verworfen am 2026-08-13: Lizenzierung wurde aus shop-baukasten komplett entfernt (anderes Monetarisierungskonzept), dieser Server wird nie deployed.
+- Restore-Tool (restore.html) wurde vorher ins shop-baukasten-Repo übernommen (static/restore.html) — Backup-Restore bleibt für Betreiber verfügbar.
+- Repo ist auf GitHub archiviert (read-only). Code stand: alle Endpunkte implementiert (activate, status, backup/upload, restore), nie produktiv gelaufen.
